@@ -1,7 +1,7 @@
 php-docker-template
 ===================
 
-Simple template that uses docker to provide a php + mariadb environment.
+Simple template that uses docker and docker-compose to provide a php + mariadb environment.
 
 ## Checkout
 ```
