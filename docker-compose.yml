@@ -1,0 +1,16 @@
+php:
+  image: gappc/php5-docker
+  command: php -S 0.0.0.0:8000 -t /code
+  links:
+    - db:mariadb
+  ports:
+    - 8000:8000
+  volumes:
+    - ./code:/code
+
+db:
+  image: mariadb
+  environment:
+    MYSQL_ROOT_PASSWORD: example
+  volumes:
+    - ./datadir:/var/lib/mysql
